@@ -5,7 +5,10 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.Move;
 import com.google.common.collect.ImmutableList;
 
-public abstract class Piece {
+import java.util.Collection;
+
+public abstract class Piece {//класс шахматная фигура
+
     protected final int piecePosition;
     protected final Alliance pieceAlliance;
 
@@ -14,7 +17,7 @@ public abstract class Piece {
         this.piecePosition = piecePosition;
     }
 
-    public abstract ImmutableList<Move> calculateLegalMoves(final Board board);
+    public abstract Collection<Move> calculateLegalMoves(final Board board);
 
     public Alliance getPieceAlliance() {
         return this.pieceAlliance;
