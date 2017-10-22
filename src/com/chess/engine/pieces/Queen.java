@@ -16,7 +16,8 @@ public class Queen extends Piece {
     private final static int[] CANDIDATE_MOVE_VECTOR_COORDINARES = {-9, -8, -7, -1, 1, 7, 8, 9};
 
 
-    Queen(int piecePosition, Alliance pieceAlliance) {
+    public Queen(final Alliance pieceAlliance,
+                 final int piecePosition) {
         super(piecePosition, pieceAlliance);
     }
 
@@ -60,5 +61,10 @@ public class Queen extends Piece {
 
     private static boolean isEightColumnExclusion(final int currentPoition, final int candidateOffset) {
         return BoardUtils.EIGHTH_COLUMN[currentPoition] && (candidateOffset == -7 || candidateOffset == 1 || candidateOffset == 9);
+    }
+
+    @Override
+    public String toString() {
+        return PieceType.QUEEN.toString();
     }
 }
