@@ -19,11 +19,11 @@ public class King extends Piece {
 
     public King(final Alliance pieceAlliance,
                 final int piecePosition) {
-        super(piecePosition, pieceAlliance);
+        super(PieceType.KING,piecePosition, pieceAlliance);
     }
 
     @Override
-    public Collection<Move> calculateLegalMoves(Board board) {
+    public Collection<Move> calculateLegalMoves(final Board board) {
 
         final List<Move> legalMoves = new ArrayList<>();
         for (final int currentCandidateOffset : CANDIDATE_MOVE_COORDINATE){
