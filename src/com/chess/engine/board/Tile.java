@@ -30,6 +30,9 @@ public abstract class Tile {//плитка (кафельная)
 
     public abstract boolean isTileOccupied();
     public abstract Piece getPiece();
+    public int getTileCoordinate(){
+        return tileCoordinate;
+    }
 
     public static final class EmptyTile extends Tile{
         EmptyTile(final int coordinate){

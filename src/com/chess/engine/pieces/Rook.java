@@ -54,6 +54,11 @@ public class Rook extends Piece {
         return ImmutableList.copyOf(legalMoves);
     }
 
+    @Override
+    public Rook movePiece(final Move move) {
+        return new Rook(move.getMovedPiece().getPieceAlliance(), move.getDestinationCoordinate());
+    }
+
     private static boolean isFirstColumnExclusion(final int currentPosition, final int candidateOffset){//если ладья стоит на первом столбце и хочет поейти
         return BoardUtils.FIRST_COLUMN[currentPosition] && (candidateOffset == -1);                     //левее то фунуция возвратит true затем последует break
     }

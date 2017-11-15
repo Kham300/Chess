@@ -17,5 +17,15 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="google-guava" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/google-collect-snapshot-20080321.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="guava-23.3-jre" level="project" />
   </component>
 </module>
